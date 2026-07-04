@@ -15,7 +15,7 @@ class Admin extends CI_Controller {
         }
     }
 
-    // ===================== DASHBOARD =====================
+
     public function dashboard() {
         $data['title']           = 'Dashboard';
         $data['total_kamar']     = count($this->Kamar_model->get_all());
@@ -33,7 +33,7 @@ class Admin extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
-    // ===================== KAMAR =====================
+
     public function kamar() {
         $data['title']  = 'Data Kamar';
         $data['kamar']  = $this->Kamar_model->get_all();
@@ -89,7 +89,7 @@ class Admin extends CI_Controller {
         redirect('admin/kamar');
     }
 
-    // ===================== PENGHUNI =====================
+    
     public function penghuni() {
         $data['title']    = 'Data Penghuni';
         $data['penghuni'] = $this->Penghuni_model->get_all();
@@ -155,7 +155,7 @@ class Admin extends CI_Controller {
         redirect('admin/penghuni');
     }
 
-    // ===================== PEMESANAN =====================
+
     public function pemesanan() {
         $data['title']     = 'Data Pemesanan';
         $data['pemesanan'] = $this->Pemesanan_model->get_all();
@@ -181,7 +181,7 @@ class Admin extends CI_Controller {
         redirect('admin/pemesanan');
     }
 
-    // ===================== PEMBAYARAN =====================
+
     public function pembayaran() {
         $data['title']      = 'Pembayaran Sewa';
         $data['pembayaran'] = $this->Pembayaran_model->get_all();
@@ -222,7 +222,7 @@ class Admin extends CI_Controller {
         redirect('admin/pembayaran');
     }
 
-    // ===================== LAPORAN =====================
+
     public function laporan() {
         $data['title']          = 'Laporan Pembayaran';
         $data['rekap']          = $this->Pembayaran_model->rekap_per_bulan();
